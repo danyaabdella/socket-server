@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-
+import Bid from "../models/Bid";
    let io = null;
 
    export function initializeSocket(server) {
@@ -49,7 +49,7 @@ import { Server } from "socket.io";
                    });
 
                    // Find the previous highest bidder and notify them specifically
-                   const bid = await require('@/models/Bid').findOne({ auctionId });
+                   const bid = await Bid.findOne({ auctionId });
                    if (bid && bid.bids.length > 1) {
                        const sortedBids = bid.bids.sort((a, b) => b.bidAmount - a.bidAmount);
                        const previousHighestBidder = sortedBids[1]?.bidderId;
