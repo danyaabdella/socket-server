@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 import Bid from "../models/Bid.js";
    let io = null;
 
-   export function initializeSocket(server) {
+   export default function initializeSocket(server) {
        if (!io) {
            io = new Server(server, {
                cors: {
