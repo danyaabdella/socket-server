@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-import Bid from "../models/Bid";
+import Bid from "../models/Bid.js";
    let io = null;
 
    export function initializeSocket(server) {
