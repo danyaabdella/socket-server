@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import initializeSocket from "./libs/socket";
+import initializeSocket from "./libs/socket.js";
 import next from "next";
 
 const dev = process.env.NODE_ENV !== "production";
