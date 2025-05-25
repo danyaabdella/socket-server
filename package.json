@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
       "dev": "NODE_ENV=development nodemon server.mjs",
-      "start": "node server.mjs"
+      "start": "node server.mjs",
+      "build": "next build"
     },
     "engines": {
       "node": "18.x"
